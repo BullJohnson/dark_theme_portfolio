@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* CSS Document */
+
+*		{	box-sizing: border-box;}
+
+body        {   background: linear-gradient(to bottom, #000000 55%, #018f23);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                font-family: Calibri, sans-serif;
+                color: #ffffff;
+}
+nav 	a 	{	text-decoration: none;
+}
+
+nav	a:link	{	color: #ffffff;}
+nav	a:visited	{	color: #ffffff;}
+nav	a:hover	{	color: #000000;}
+nav	a:active	{	color: #018f23;}
+
+ul          {   margin: 0;
+                padding: 0;
+                display: inline-block;
+}
+li          {   list-style: none;
+                display: inline-block;
+                padding: .4em;
+}
+
+
+.display        {   padding: 2em;
+                    width: 100%;
+                    max-width: 500px;
+                    margin: 1em;
+}
+.top_nav_level      {   float: left;
+                        margin-left: 10%;
+    					margin-top: 2%;
+                        font-size: 1.1em;
+						font-weight: bold;
+						letter-spacing: 1px;
+}
+.bottom_nav_level   {   float: right;
+                        margin-right: 10%;
+                        font-size: 1.1em;
+						font-weight: bold;
+						letter-spacing: 1px;
+}
+.upper_tablet   {   width: 65%;
+					min-width: 175px;
+                    height: 80px;
+                    background-color: #232323;
+                    opacity: 1;
+                    margin: auto;
+                    border-radius: 50px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    box-shadow: 0px -4px 4px -2px rgba(255, 255, 255, 0.7), 0px 5px 12px 10px rgba(0, 0, 0, 0.8), 0px 4px 4px 2px rgba(255, 255, 288, 0.8);
+}
+
+.lower_tablet   {   width: 85%;
+					min-width: 235px;
+                    height: auto;
+                    background-color: #232323;
+                    opacity: 1;
+                    margin: auto;
+                    border-radius: 50px;
+                    margin-top: 35px;
+                    margin-bottom: 10px;
+                    box-shadow: 0px -4px 4px -2px rgba(255, 255, 255, 0.7), 0px 5px 12px 10px rgba(0, 0, 0, 0.8), 0px 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+.homepage_text	{	text-align: right;
+					margin: 6%
+}
+.my_title		{	padding-top: 7%;
+					font-size: 1.15em;
+					margin: 0;
+}
+.my_name		{	margin: 0;
+					padding-top: 0;
+					font-size: 1.4em;
+}
+.my_llc			{	margin: 0;
+					font-size: 1em;
+}
+.my_blurb		{	font-size: .8em;
+}
+.mug_frame      {   text-align: center;
+					margin: -3px;
+}
+.mug_shot       {   width: 80%;
+                    margin: auto;
+}
+
+.vert_tile_body		{	width: 100px;
+                    height: auto;
+                    box-shadow: 0px 10px 10px -0px #018f23;
+                    padding: 0;
+                    margin: 0;
+                    border-radius: 20pt;
+}
+.horiz_tile_body	{	width:  138px;
+						height: 100px;
+	                    box-shadow: 0px 10px 10px -0px #018f23;
+                   		padding: 0;
+                    	margin: 0;
+                   		border-radius: 20pt;
+}
+
+.tile_1			{	position: relative;
+					width: 100px;
+}
+
+.tile_2         {   position: relative;
+					margin-left: 170px;
+					margin-top: -65px;
+}
+.tile_3			{	position: relative;
+					width: 138px;
+					margin-top: -20px;
+}
+
+
+#gallery		{	display: flex;
+					justify-content: space-around;
+}
+.mobile_div			{	display: inline-block;}
+.download_cv		{	background-color: #018f23;
+						height: 30px;
+						border-radius: 35px;
+						margin-top: 0;
+						margin-bottom: 25px;
+						border: none;
+						font-weight: 600;
+                    	box-shadow: 0px -4px 4px -2px rgba(255, 255, 255, 0.7), 0px 5px 12px 10px rgba(0, 0, 0, 0.8), 0px 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+.center_button		{	text-align: center;
+						width: 100px;
+						margin: auto;
+}
+.form_buttons		{	text-align: center;
+						margin-top: 5px;
+						margin-left: -3%;
+}
+.contact_request	{	font-size: 1.8em;
+						margin-left: 3%;
+}
+.email_me			{	font-size: 1.8em;
+						margin-bottom: .25em;
+						margin-left: 3%;
+}
+.my_address			{	text-decoration: none;
+						color: #ffffff;
+}
+.my_address:hover 	{	color: #018f23;
+}
+.email_div			{	margin-bottom: 3em;
+						text-align: center;
+						transition: ease-out .5s;
+}
+.email_div:hover	{	transform: scale(1.1);						
+}
+.input_field		{	padding-bottom: 3%;
+						margin-left: 3%;
+}
+
+	/*Url for the lime green color palate: https://icolorpalette.com/color/bright-lime-green*/
+input 		{	background-color: #defeca;
+				box-shadow: 1px 1px 10px 1px #018f23;
+				box-shadow: -1px -1px 10px 1px #018f23;
+}
+textarea 	{	background-color: #defeca;
+				box-shadow: 1px 1px 10px 1px #018f23;
+				box-shadow: -1px -1px 10px 1px #018f23;
+				max-width: 97%;
+}
+input[type="submit"]:hover{transform: scale(1.1);}
+input[type="reset"]:hover{transform: scale(1.1);}
+
+button a			{	text-decoration: none;
+}
+div a button:link	{	color: #000000;}
+div a button:visited	{	color: #000000;}
+div a button:hover		{	color: #ffffff;}
+div button:hover	{	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.8), 0px 2px 2px 2px rgba(0, 0, 0, 0.8), 0px 2px 2px 2px rgba(255, 255, 255, 0.7);
+}
+div button:active	{	box-shadow: 0px -4px 4px -2px rgba(255, 255, 255, 0.7), 0px 5px 12px 10px rgba(0, 0, 0, 0.8), 0px 4px 4px 2px rgba(0, 0, 0, 0.8);}
+
+
+/*Skills Page Styles*/
+div[id="skills"]	div {	display: none;}
+div[id="skills"] 	h1	{	margin-bottom: 0;}
+div[id="skills"] 	li	{	display: block;}
+div[id="skills"] 	a 	{	font-size: .9em;
+							color: #defeca;
+}
+h2 			{	background: url("images/bulb_9_off.png") no-repeat left;
+				padding: .8em 0 .8em 2em;
+				margin-top: 0;
+				margin-bottom: -.5em;
+				transition: all ease-out .5s;	
+}
+h2.lit 		{	background: url("images/bulb_9_on.png") no-repeat left;}
+h2:hover	{	transform: scale(1.02);}
+
+.skill_item_indent		{	margin-left: 4em;
+							margin-top: 0;
+}
+#skills		{	margin-bottom: 15%;}
+
+
+
+				/*For transform of app-tiles, on the home page*/
+			figure	{	position: relative;
+						z-index: 1;
+						opacity: .75;
+						color: rgba(255,255,255,0);
+						transition: all ease-out 1s;
+					}
+			figure:hover	{	opacity: 1;
+								z-index: 999;
+								color: rgba(255,255,255,1);
+								transform: scale(1.5);
+							}
+			figure:hover 	figcaption 	{	background: none;}
+			figcaption					{	padding-top: 1em;
+											text-align: center;
+											position: relative;
+											z-index: 999;
+			}
+
+
+/*Media Query for viewport width 500-700 pixels, (still single column, but small adjustments)*/
+@media (min-width: 500px) {
+	
+	.adjust_nav_500		{	padding-left: 2em;
+	}
+	.my_title			{	font-size: 1.38em;
+							/*base times 1.15*/
+	}
+	.my_name			{	font-size: 1.7em;
+							/*base times 1.4*/
+	}
+	.my_llc				{	font-size: 1.2em;
+							/*used as base, since original size is 1em*/
+	}
+	.my_blurb			{	font-size: .96em;
+							/*base times 0.8*/
+	}
+	.tile_1				{	position: relative;
+							margin-left: 50px;
+	}
+	.tile_2         	{   margin-left: 200px;
+							margin-top: -65px;
+	}
+	.tile_3				{	position: relative;
+							margin-left: 25px;
+							margin-top: -50px;
+	}
+	
+	input 				{	font-size: 1.1em;}
+	textarea 			{	font-size: 1.1em;}
+	.input_field 		{	font-size: 1.1em;}
+	.my_address 		{	font-size: 1.2em;}
+	
+	/* Skills Page Styles*/
+	div[id="skills"] 	li	{	font-size: 1.1em;}
+	div[id="skills"] 	a	{	font-size: 1em;}
+	
+}
+
+
+/*Media Query for viewport width 700-900 pixels, (Change to landscape orientation, but narrow)*/
+@media (min-width: 700px) {
+	
+	.display        {   padding: 2em;
+                    	width: 100%;
+                    	max-width: 850px;
+                    	margin: 1em;
+	}
+	ul 				{	display: inline-flex;
+	}
+	li 				{	margin: 0;
+						padding: 0;
+	}
+	.top_nav_level	{	display: flex;
+						margin: 2% 0 0 10%;
+	}
+	.bottom_nav_level	{	display: flex;
+							margin: 2% 10% 0 0;
+	}
+	.upper_tablet		{	display: flex;
+							justify-content: space-around;
+							height: 40px;
+	}
+	.my_blurb			{	font-size: .96em;
+							width: 40%;
+							float: right;
+	}
+	.mug_frame      {   clear: both;
+						float: right;
+						width: 40%;
+						height: 40%;
+						position: relative;
+						margin-top: 10px;
+						margin-right: 5px;
+	}
+	.mug_shot       {   width: 100%;
+	}
+	.tile_1			{	margin-left: 50px;
+						margin-top: -80px;
+	}
+	.input_field	{	padding-bottom: 1%;}
+	.my_address		{	font-size: 1.3em;}
+	input[type="submit"] 	{	margin-right: 20px;}
+	input[type="reset"] 	{	margin-left: 20px;}
+	
+	/* Skils Page Styles*/
+	div[id="skills"] 	ul	{	display: block;}
+	div[id="skills"] 	a 	{	font-size: 1.1em;}
+	#skills					{	margin-bottom: 8%;}
+	div[id="skills"] 	li	{	font-size: 1.2em;}
+
+}
+
+
+/*Media Query for viewport width 900-plus pixels, (widen display, make tiles larger and adjust text)*/
+@media (min-width: 900px) {
+	
+	.display        {   max-width: 1200px;
+	}
+	.top_nav_level	{	display: flex;
+						margin: 1.5% 0 0 12%;
+						font-size: 1.3em;
+	}
+	.bottom_nav_level	{	display: flex;
+							margin: 1.5% 12% 0 0;
+							font-size: 1.3em;
+	}
+	.adjust_nav_500		{	padding-left: 2.5em;
+	}
+	.my_title		{	padding-top: 3%;
+						font-size: 1.6em;
+						/*base times 1.15*/
+	}
+	.my_name		{	margin: 0;
+						padding-top: 0;
+						font-size: 2em;
+						/*base times 1.4*/
+	}
+	.my_llc			{	margin: 0;
+						font-size: 1.4em;
+						/*used as base, since original size is 1em*/
+	}
+	.my_blurb			{	font-size: 1.1em;
+							width: 50%;
+							float: right;
+							/*base times 0.8*/
+	}
+	.mug_frame			{	margin-top: 10px;
+							width: 40%;
+							height: 40%;
+							margin-right: 10px
+	}
+	.vert_tile_body		{	transform: scale(1.3);
+	}
+	.horiz_tile_body	{	transform: scale(1.3);
+	}
+
+	.tile_1				{	position: relative;
+							margin-left: 120px;
+							margin-top: -90px;
+	}
+	.tile_2         	{   position: relative;
+							margin-left: 280px;
+							margin-top: -10px;
+	}
+	.tile_3				{	position: relative;
+							margin-left: 75px;
+							margin-top: -30px;
+	}
+	.center_button		{	position: relative;
+							margin-top: -30px;
+	}
+	.contact_request	{	font-size: 2.1em;
+							margin-left: 5%;
+	}
+	.input_field		{	margin-left: 5%;
+	}
+	.email_me			{	font-size: 2.1em;
+							margin-left: 10%;
+	}
+	.email_div			{	margin-bottom: 5em;
+	}
+	.my_address			{	font-size: 1.6em;}
+	
+	/* Skills Page Styles*/
+	div[id="skills"] a 	{	font-size: 1.3em;}
+	div[id="skills"] li	{	font-size: 1.3em;}
+	
+}

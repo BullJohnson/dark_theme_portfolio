@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Web Developer, Will Johnson::Skills</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="dark_theme.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="display">
+
+            <nav>
+                <div class="upper_tablet">
+                    <ul class="top_nav_level">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="adjust_nav_500"><a href="about.html">About</a></li>
+                    </ul>
+                    <ul class="bottom_nav_level">
+                        <li><a href="skills.html">Skills</a></li>
+                        <li class="adjust_nav_500"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="lower_tablet">
+                <div class="homepage_text">
+                    <h3 class="my_title">Web Developer</h3>
+                    <h1 class="my_name">William S. Johnson, Jr</h1>
+                    <h3 class="my_llc">Iron In The Fire, LLC</h3>
+                </div>
+                <div class="mug_frame">
+                    <img src="images/glow_mug.png" class="mug_shot" alt="Me">
+                </div>
+                <div id="skills">
+					
+                    <h1 class="contact_request">Relavant Skills:</h1>
+					
+					<h2><a href="#">Programming and Markup Languages</a></h2>
+					<div class="skill_item_indent">
+						<ul>
+							<li>HTML5&nbsp;&amp;&nbsp;CSS</li>
+							<li>JavaScript / jQuery</li>
+							<li>Python</li>
+						</ul>
+					</div>
+					
+					<h2><a href="#">Cloud Computing</a></h2>
+					<div class="skill_item_indent">
+						<ul>
+							<li>MongoDB</li>
+							<li>Amazon Web Services</li>
+						</ul>
+					</div>
+					
+					<h2><a href="#">Tools</a></h2>
+					<div class="skill_item_indent">
+						<ul>
+							<li>GitHub</li>
+							<li>Visual Studio Code</li>
+							<li>Chrome Developer Tools</li>
+							<li>Adobe Photoshop</li>
+							<li>Hitfilm Express</li>
+							<li>Application Programming Interfaces</li>
+						</ul>
+					</div>
+					
+					<h2><a href="#">Attributes and Experiences</a></h2>
+					<div class="skill_item_indent">
+						<ul>
+							<li>Experienced at Layout&nbsp;&amp;&nbsp;Design</li>
+							<li>Editorial&nbsp;&amp;&nbsp;Journalistic Experience</li>
+							<li>Design Thinking</li>
+						</ul>
+					</div>
+		
+                </div>
+				
+				<div class="center_button">
+                    <a href="images/resume_green.pdf" target="_blank">
+                        <button type="button" class="download_cv">Download CV</button>
+                    </a>
+				</div>
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script>
+
+            let onSwitch = new Audio("images/on_switch.mp4");
+            let offSwitch = new Audio("images/off_switch.mp4");
+
+             $(document).ready( () => {
+                
+                // runs when an h2 heading is clicked
+                $("#skills h2").click( evt => {
+                    const h2 = evt.currentTarget;
+
+                    $(h2).toggleClass("lit");
+
+                    if ($(h2).attr("class") != "lit") {
+                        onSwitch.play();
+                        $(h2).next().slideUp(1500, "easeOutSine");
+                    }
+                    else {
+                        offSwitch.play();
+                        $(h2).next().slideDown(1500, "easeInSine");
+                    }
+                    
+                    evt.preventDefault();
+                }); // end click              
+            }); // end ready
+        </script>
+    </body>
+</html>
