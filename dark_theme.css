@@ -209,6 +209,16 @@ h2:hover	{	transform: scale(1.02);}
 }
 #skills		{	margin-bottom: 15%;}
 
+/*Contact Page Styles*/
+.ui-dialog-title	{	text-align: center;
+						color: #9bcc60;
+						font-size: 1.5em;
+}
+/*.ui-dialog-content			{	max-width: 90%;}*/
+/*.ui-dialog-buttonset	{	text-align: center;
+	float: none;
+}*/
+
 
 
 				/*For transform of app-tiles, on the home page*/

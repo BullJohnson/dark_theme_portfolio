@@ -5,6 +5,21 @@
 
 let firstName, lastName, company, email, phone, comments;
 
+//function to reset form spans
+function startOver () {
+    $("#first_name").val("");
+    $("#last_name").val("");
+    $("#company").val("");
+    $("#email_1").val("");
+    $("#phone").val("");
+    $("#comments").val("");
+
+    $("#first_name").next().text("*");
+    $("#last_name").next().text("*");
+    $("#email_1").next().text("*")
+    $("label[for='comments']").next().text("*");
+};
+
 //functon to gather and display user input for confirmation, before sending                
 function harvest () {
     //$("div[class='form_buttons']").hide();
@@ -20,18 +35,18 @@ function harvest () {
     const formData = JSON.stringify(formEntries);
 //Parsing the JSON object & creating a heading for dialog box.
     const boxDisplay = JSON.parse(formData);
-    const heading = "<h4 className=\"ui-state-default ui-corner-all ui-helper-clearfix\" style=\"padding:4px; background: #018f23; text-align: center; margin-top: 0;\">Alien Sighting Report & Json Data<h4>"
+    //const heading = "<h4 className=\"ui-state-default ui-corner-all ui-helper-clearfix\" style=\"padding:4px; background: #018f23; text-align: center; margin-top: 0;\">Your Contact Request & Json Data<h4>"
 //Displaying the input values, within the dialog box, as a confirmation for the user
-    results.innerHTML = heading + "Name:&emsp;" + boxDisplay.firstName + "&emsp;" + boxDisplay.lastName + 
+    results.innerHTML = "<br>" + "Name:&emsp;" + boxDisplay.firstName + "&emsp;" + boxDisplay.lastName + 
         "<br>" + "Company:&emsp;" + boxDisplay.company + "<br>" + "Email:&emsp;" + boxDisplay.email + 
-        "<br>" + "Phone:&emsp;" + boxDisplay.phone + "<br>" + "Comments:&emsp;<br>" + 
+        "<br>" + "Phone:&emsp;" + boxDisplay.phone + "<br><br>" + "Comments:&emsp;<br>" + 
         boxDisplay.comments + "<br><br>" + "JSON:<br>" + formData;
 };
 
 
 
 //Function to Validate Contact Form Entries
-function validate (){
+function validate () {
     let isValid = true;
 
     //validate first name entry
@@ -89,13 +104,13 @@ function validate (){
 
     //validate non-required fields
     company = $("#company").val().trim();
-    if (company == "") {
+    if (company == "" && isValid == true) {
         company = "N/A";
     }
     $("#company").val(company);
 
     phone = $("#phone").val().trim();
-    if (phone == ""){
+    if (phone == "" && isValid ==true){
         phone = "No Entry";
     }
     $("#phone").val(phone);
@@ -124,7 +139,8 @@ $(document).ready( () => {
         },
         open: function()  {
             $("#submit").hide();
-            $("#reset").hide()
+            $("#reset").hide();
+            $(".ui-dialog-titlebar-close").hide();
         },
         buttons: [
             {
@@ -153,6 +169,11 @@ $(document).ready( () => {
         validate();
     });
     // handle click on Form Reset button
+    $("#reset").click( evt => {
+        evt.preventDefault();
+        startOver();
+        console.log("happy birthday")
+    });
 
 
 }); //end doc ready
