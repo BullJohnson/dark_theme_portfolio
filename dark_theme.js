@@ -5,6 +5,27 @@
 
 let firstName, lastName, company, email, phone, comments;
 
+//function to handle clicking of confirmed button in dialog box
+function confirmed () {
+    setTimeout(startOver, 1000);
+    setTimeout( () => {
+        $("#dialog").dialog("open");
+        $("#confirm, #edit").hide();
+        const heading = "<h4 className=\"ui-state-default ui-corner-all ui-helper-clearfix\" style=\"padding:4px; background: #018f23; text-align: center; margin-top: 0;\">Your Contact Request Has Been Sent<h4>"
+        $("#dialog").dialog("option", "position", {my:"center", at:"top+70%", of:"#contact_form"});
+        $("#dialog").dialog("option", "title", "Confirmation");
+        results.innerHTML = heading;
+        }, 1000);
+    setTimeout( () => {
+        $("#dialog").dialog("close");
+        setTimeout( () => {
+            $("#confirm, #edit").show(1000);
+            $("#dialog").dialog("option", "title", "Confirm Your Entry Details");
+        }, 1500);
+    }, 5000);
+    
+};
+
 //function to reset form spans
 function startOver () {
     $("#first_name").val("");
@@ -22,8 +43,7 @@ function startOver () {
 
 //functon to gather and display user input for confirmation, before sending                
 function harvest () {
-    //$("div[class='form_buttons']").hide();
-//Create a javaScript object from form data
+    //Create a javaScript object from form data
     let formEntries = new Object();
     formEntries.firstName = firstName;
     formEntries.lastName = lastName;
@@ -31,12 +51,12 @@ function harvest () {
     formEntries.email = email;
     formEntries.phone = phone;
     formEntries.comments = comments;
-//Converting the javaScript Object To a JSON Object
+    //Converting the javaScript Object To a JSON Object
     const formData = JSON.stringify(formEntries);
-//Parsing the JSON object & creating a heading for dialog box.
+    //Parsing the JSON object & creating a heading for dialog box.
     const boxDisplay = JSON.parse(formData);
     //const heading = "<h4 className=\"ui-state-default ui-corner-all ui-helper-clearfix\" style=\"padding:4px; background: #018f23; text-align: center; margin-top: 0;\">Your Contact Request & Json Data<h4>"
-//Displaying the input values, within the dialog box, as a confirmation for the user
+    //Displaying the input values, within the dialog box, as a confirmation for the user
     results.innerHTML = "<br>" + "Name:&emsp;" + boxDisplay.firstName + "&emsp;" + boxDisplay.lastName + 
         "<br>" + "Company:&emsp;" + boxDisplay.company + "<br>" + "Email:&emsp;" + boxDisplay.email + 
         "<br>" + "Phone:&emsp;" + boxDisplay.phone + "<br><br>" + "Comments:&emsp;<br>" + 
@@ -119,6 +139,7 @@ function validate () {
     //Open dialog box if all entries are valid
     if (isValid == true) {
         $("#dialog").dialog("open");
+        $("#dialog").dialog("option", "position", {my:"center", at:"top+20%", of:"#contact_form"});
         harvest();
     };
 };
@@ -129,18 +150,21 @@ $(document).ready( () => {
 
     // Initialize jQuery Widgets (Dialog Box)
     $("#dialog").dialog({           
-        autoOpen: false,                
+        autoOpen: false,
+        //modal: true,
+        //position: { my: "center", at: "top+25%", of:"#contact_form"},
         width: 465,
         hide: { effect: "fadeOut", duration: 1000},
         show: ("highlight",{color:"#ffffff"}, 1000),
-        close: function() {                         // You may have to write a function, here,
-            fadeOut.play();                         // to handle the clicks of two "confirm"
-            $("#opener").attr("disabled", false);   // and "edit" buttons.
+        close: function() {
+           // fadeOut.play();    This line does nothing. It was brought over from Alien App
+           $("#submit, #reset, button[class='download_cv']").show();
+           $("#first_name, #last_name, #company, #email_1, #phone, #comments").removeAttr("readonly");  
         },
         open: function()  {
-            $("#submit").hide();
-            $("#reset").hide();
             $(".ui-dialog-titlebar-close").hide();
+            $("#submit, #reset, button[class='download_cv']").hide();
+            $("#first_name, #last_name, #company, #email_1, #phone, #comments").attr("readonly", "readonly");
         },
         buttons: [
             {
@@ -156,11 +180,9 @@ $(document).ready( () => {
                 text: "Edit",
                 click: function() {
                     $(this).dialog("close");
-                    editForm();
                 }
             }
-        ]          
-    
+        ]              
     });
 
     // handle click on Form Submit button
