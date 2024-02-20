@@ -7,12 +7,13 @@ let firstName, lastName, company, email, phone, comments;
 
 //function to handle clicking of confirmed button in dialog box
 function confirmed () {
+    //$("#contact_form").submit();
     setTimeout(startOver, 1000);
     setTimeout( () => {
         $("#dialog").dialog("open");
         $("#confirm, #edit").hide();
         const heading = "<h4 className=\"ui-state-default ui-corner-all ui-helper-clearfix\" style=\"padding:4px; background: #018f23; text-align: center; margin-top: 0;\">Your Contact Request Has Been Sent<h4>"
-        $("#dialog").dialog("option", "position", {my:"center", at:"top+70%", of:"#contact_form"});
+        //$("#dialog").dialog("option", "position", {my:"center", at:"top+70%", of:"#contact_form"});
         $("#dialog").dialog("option", "title", "Confirmation");
         results.innerHTML = heading;
         }, 1000);
@@ -152,7 +153,7 @@ $(document).ready( () => {
     $("#dialog").dialog({           
         autoOpen: false,
         //modal: true,
-        //position: { my: "center", at: "top+25%", of:"#contact_form"},
+        position: { my: "center", at: "top+25%", of:"#contact_form"},
         width: 465,
         hide: { effect: "fadeOut", duration: 1000},
         show: ("highlight",{color:"#ffffff"}, 1000),
@@ -187,7 +188,7 @@ $(document).ready( () => {
 
     // handle click on Form Submit button
     $("#submit").click( evt => {
-        evt.preventDefault();
+        //evt.preventDefault();
         validate();
     });
     // handle click on Form Reset button
