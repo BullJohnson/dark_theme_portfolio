@@ -8,7 +8,7 @@ let firstName, lastName, company, email, phone, comments, screenWidth, dialogWid
 //function to adjust dialob box to fit mobile device
 function determineBoxWidth () {
     screenWidth = window.screen.width;
-    if (screenWidth < 700) {
+    if (screenWidth < 500) {
         dialogWidth = screenWidth * .9;
     } else {
         dialogWidth = 465;
