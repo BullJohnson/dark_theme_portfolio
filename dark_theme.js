@@ -3,7 +3,17 @@
                 // Dark Themed, Minimalist Portfolio | William S. Johnson, Jr
 
 
-let firstName, lastName, company, email, phone, comments;
+let firstName, lastName, company, email, phone, comments, screenWidth, dialogWidth;
+
+//function to adjust dialob box to fit mobile device
+function determineBoxWidth () {
+    screenWidth = window.screen.width;
+    if (screenWidth < 700) {
+        dialogWidth = screenWidth * .9;
+    } else {
+        dialogWidth = 465;
+    }
+};
 
 //function to handle clicking of confirmed button in dialog box
 function confirmed () {
@@ -148,13 +158,15 @@ function validate () {
 
 
 $(document).ready( () => {
+    determineBoxWidth();
 
     // Initialize jQuery Widgets (Dialog Box)
     $("#dialog").dialog({           
         autoOpen: false,
         //modal: true,
         position: { my: "center", at: "top+25%", of:"#contact_form"},
-        width: 465,
+        //width: 465,
+        width: dialogWidth,
         hide: { effect: "fadeOut", duration: 1000},
         show: ("highlight",{color:"#ffffff"}, 1000),
         close: function() {
