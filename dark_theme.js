@@ -3,7 +3,7 @@
                 // Dark Themed, Minimalist Portfolio | William S. Johnson, Jr
 
 
-let firstName, lastName, company, email, phone, comments, screenWidth, dialogWidth;
+let firstName, lastName, company, email, phone, comments, screenWidth, dialogWidth, formData;
 
 //function to adjust dialob box to fit mobile device
 function determineBoxWidth () {
@@ -17,7 +17,17 @@ function determineBoxWidth () {
 
 //function to handle clicking of confirmed button in dialog box
 function confirmed () {
-    //$("#contact_form").submit();
+    //creating endpoint and data delivery variables, for my API fetch command
+    const endPoint = " https://mptmevvbn9.execute-api.us-east-1.amazonaws.com/default/PortfolioFormSubmitFunction";
+    const deliveryOption = {
+        method: "POST",
+        //body: JSON.stringify(formEntries)  [A JSON has already been prepared, so I don't need this line]
+        body: formData
+    };
+    fetch(endPoint, deliveryOption)    //Delivering data to server through API rather than $("#form").submit()
+    .then(response => response.promise(response))
+    .then(response => console.log(promise(response)))
+
     setTimeout(startOver, 1000);
     setTimeout( () => {
         $("#dialog").dialog("open");
@@ -63,7 +73,7 @@ function harvest () {
     formEntries.phone = phone;
     formEntries.comments = comments;
     //Converting the javaScript Object To a JSON Object
-    const formData = JSON.stringify(formEntries);
+    formData = JSON.stringify(formEntries);
     //Parsing the JSON object & creating a heading for dialog box.
     const boxDisplay = JSON.parse(formData);
     //const heading = "<h4 className=\"ui-state-default ui-corner-all ui-helper-clearfix\" style=\"padding:4px; background: #018f23; text-align: center; margin-top: 0;\">Your Contact Request & Json Data<h4>"
