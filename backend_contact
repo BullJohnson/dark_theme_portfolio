@@ -1,0 +1,36 @@
+
+//Back-end code to handle contact form submission.  Implemented as a Lambda function in AWS
+
+const aws = require("aws-sdk");
+const ses = new aws.SES({ region: "us-east-1" });
+exports.handler = async function (event) {
+  console.log('EVENT: ', event)
+
+  	// Extract the properties from the event body
+  const { firstName, lastName, company, email, phone, comments } = JSON.parse(event.body);
+  const params = {
+    Destination: {
+      ToAddresses: ["wjohnson@ironinthefirellc.com"],
+    },
+    Message: {
+      Body: {
+        Text: { 
+            Data: `From: ${firstName} ${lastName}
+            
+            Email Address: ${email}
+            
+            Company: ${company}
+            
+            Phone: ${phone}
+            
+            Message:
+            ${comments}` 
+        },
+      },
+      Subject: { Data: `Portfolio Form Submission` },
+    },
+    Source: "wjohnson@ironinthefirellc.com",
+  };
+
+  return ses.sendEmail(params).promise();
+};
