@@ -143,7 +143,7 @@ li          {   list-style: none;
 						margin-top: 5px;
 						margin-left: -3%;
 }
-.contact_request	{	font-size: 1.8em;
+.content_heading	{	font-size: 1.8em;
 						margin-left: 3%;
 }
 .email_me			{	font-size: 1.8em;
@@ -209,15 +209,47 @@ h2:hover	{	transform: scale(1.02);}
 }
 #skills		{	margin-bottom: 15%;}
 
+
 /*Contact Page Styles*/
 .ui-dialog-title	{	text-align: center;
 						color: #9bcc60;
 						font-size: 1.5em;
 }
-/*.ui-dialog-buttonset	{	text-align: center;
-	float: none;
-}*/
 
+
+/*About Page Styles*/
+.about_item_indent		{	margin-left: 3em;
+							margin-top: 0;
+							margin-bottom: 0;
+							height: 120px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							-webkit-mask-image: linear-gradient(180deg, #232323 40%, transparent);
+									mask-image: linear-gradient(180deg, #232323 40%, transparent);
+}
+/*#about_me 				{	background: url("images/bulb_9_off.png") no-repeat left;}*/
+h3[id="about_me"]		{	padding: .3em 0 0 1.3em;
+							margin-top: 0;
+							margin-bottom: -.5em;
+							font-size: 1.5em;
+							color: #defeca;
+}
+dt  					{	margin: 0 0 0 0;
+							padding: 0;
+							font-size: 1.2em;
+}
+p 						{	margin-top: 0;
+							margin-left: -20%;
+							margin-right: 2%;
+}
+h6 						{	text-align: center;
+							margin-top: 0;
+}
+
+h6 	a 					{	text-decoration: none;
+							color: #defeca;							
+}
+h6 	a:hover				{	color: #018f23;}
 
 
 				/*For transform of app-tiles, on the home page*/
@@ -392,7 +424,7 @@ h2:hover	{	transform: scale(1.02);}
 	.center_button		{	position: relative;
 							margin-top: -30px;
 	}
-	.contact_request	{	font-size: 2.1em;
+	.content_heading	{	font-size: 2.1em;
 							margin-left: 5%;
 	}
 	.input_field		{	margin-left: 5%;
