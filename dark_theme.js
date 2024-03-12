@@ -93,7 +93,7 @@ function validate () {
     //validate first name entry
     firstName = $("#first_name").val().trim();
     if (firstName =="") {
-        $("#first_name").next().text("This field is required.");
+        $("#first_name").next().text("This field is required");
         isValid = false;
     }
     else {
@@ -118,7 +118,7 @@ function validate () {
     const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
     email = $("#email_1").val().trim();
     if (email == "") {
-        $("#email_1").next().text("This field is required.");
+        $("#email_1").next().text("This field is required");
         isValid = false;
     }
     else if (!emailPattern.test(email)) {
