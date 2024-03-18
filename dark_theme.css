@@ -227,6 +227,9 @@ h2:hover	{	transform: scale(1.02);}
 							-webkit-mask-image: linear-gradient(180deg, #232323 40%, transparent);
 									mask-image: linear-gradient(180deg, #232323 40%, transparent);
 }
+.over_flame				{	position: relative;
+							z-index: 2;
+}
 h3[id="mug_icon"] {background: url("images/mug_icon.png")left no-repeat;
 	background-size: contain;
 	background-size: 10%;	
@@ -254,11 +257,11 @@ dt  					{	margin: 0 0 0 0;
 							font-size: 1.2em;
 }
 p[class="about_text"] 	{	margin-top: 0;
-							margin-left: -20%;
+							margin-left: -17%;
 							margin-right: 2%;
 }
 p 	img 				{	height: 80%;
-							width: 80%;
+							width: 85%;
 							margin-top: -10%;
 }
 h6 						{	text-align: center;
@@ -328,6 +331,13 @@ h6 	a:hover				{	color: #018f23;}
 	div[id="skills"] 	li	{	font-size: 1.1em;}
 	div[id="skills"] 	a	{	font-size: 1em;}
 	
+	/* About Page Styles*/
+	h3[class="about_subhead"] 	{	font-size: 1.65em;}
+	dt 							{	font-size: 1.32em;}
+	p 							{	font-size: 1.1em;}
+	h6 							{	font-size: 1.1em;}
+	p[class="about_text"] 		{	margin-left: -14%;}
+	
 }
 
 
@@ -376,7 +386,7 @@ h6 	a:hover				{	color: #018f23;}
 	input[type="submit"] 	{	margin-right: 20px;}
 	input[type="reset"] 	{	margin-left: 20px;}
 	
-	/* Skils Page Styles*/
+	/* Skills Page Styles*/
 	div[id="skills"] 	ul	{	display: block;}
 	div[id="skills"] 	a 	{	font-size: 1.1em;}
 	#skills					{	margin-bottom: 8%;}
