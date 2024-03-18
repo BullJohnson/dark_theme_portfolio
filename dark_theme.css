@@ -227,12 +227,27 @@ h2:hover	{	transform: scale(1.02);}
 							-webkit-mask-image: linear-gradient(180deg, #232323 40%, transparent);
 									mask-image: linear-gradient(180deg, #232323 40%, transparent);
 }
-/*#about_me 				{	background: url("images/bulb_9_off.png") no-repeat left;}*/
-h3[id="about_me"]		{	padding: .3em 0 0 1.3em;
-							margin-top: 0;
-							margin-bottom: -.5em;
-							font-size: 1.5em;
-							color: #defeca;
+h3[id="mug_icon"] {background: url("images/mug_icon.png")left no-repeat;
+	background-size: contain;
+	background-size: 10%;	
+}
+h3[id="apps_icon"] {background: url("images/apps_icon.png")left no-repeat;
+	background-size: contain;
+	background-size: 10%;	
+}
+h3[id="portfolio_icon"] {background: url("images/portfolio_icon.png")left no-repeat;
+	background-size: contain;
+	background-size: 10%;	
+}
+h3[id="honors_icon"] {background: url("images/honors_icon.png")left no-repeat;
+	background-size: contain;
+	background-size: 10%;	
+}		
+h3[class="about_subhead"]		{	padding: .3em 0 0 1.3em;
+									margin-top: 0;
+									margin-bottom: -.5em;
+									font-size: 1.5em;
+									color: #defeca;
 }
 dt  					{	margin: 0 0 0 0;
 							padding: 0;
@@ -241,6 +256,10 @@ dt  					{	margin: 0 0 0 0;
 p[class="about_text"] 	{	margin-top: 0;
 							margin-left: -20%;
 							margin-right: 2%;
+}
+p 	img 				{	height: 80%;
+							width: 80%;
+							margin-top: -10%;
 }
 h6 						{	text-align: center;
 							margin-top: 0;
