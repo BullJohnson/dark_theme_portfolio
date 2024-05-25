@@ -261,7 +261,7 @@ p[class="about_text"] 	{	margin-top: 0;
 							margin-left: -17%;
 							margin-right: 2%;
 }
-p 	img 				{	height: 80%;
+.college_logo 			{	height: 80%;
 							width: 85%;
 							margin-top: -10%;
 }
@@ -333,7 +333,9 @@ h6 	a:hover				{	color: #018f23;}
 	div[id="skills"] 	a	{	font-size: 1em;}
 	
 	/* About Page Styles*/
-	h3[class="about_subhead"] 	{	font-size: 1.65em;}
+	h3[class="about_subhead"] 	{	font-size: 1.65em;
+									margin-left: 1%;
+	}
 	dt 							{	font-size: 1.32em;}
 	p 							{	font-size: 1.1em;}
 	h6 							{	font-size: 1.05em;}
@@ -392,6 +394,32 @@ h6 	a:hover				{	color: #018f23;}
 	div[id="skills"] 	a 	{	font-size: 1.1em;}
 	#skills					{	margin-bottom: 8%;}
 	div[id="skills"] 	li	{	font-size: 1.2em;}
+	
+		/* About Page Styles*/
+	h3[class="about_subhead"] 	{	font-size: 1.82em;
+									margin-left: 1.5%;
+	}
+	dt 							{	font-size: 1.45em;}
+	p 							{	font-size: 1.2em;}
+	h6 							{	font-size: 1.05em;}
+	p[class="about_text"] 		{	margin-left: -7%;
+									margin-right: 4%;
+	}
+	
+	h3[id="mug_icon"] {background-size: 6%;}
+	h3[id="apps_icon"] {background-size: 6%;}
+	h3[id="portfolio_icon"] {background-size: 6%;}
+	h3[id="honors_icon"] {background-size: 6%;}
+	
+	.college_logo		{	margin-left: 4.5%;}
+	.about_item_indent	{	padding-top: 2px;
+							margin-left: 4em;
+	}
+	.over_flame			{	margin-bottom: 3%;}
+	
+	div[class="about_item_indent"] img {	max-width: 55%;
+											max-height: 55%;
+	}
 
 }
 
@@ -469,5 +497,19 @@ h6 	a:hover				{	color: #018f23;}
 	/* Skills Page Styles*/
 	div[id="skills"] a 	{	font-size: 1.3em;}
 	div[id="skills"] li	{	font-size: 1.3em;}
+	
+	/* About Page Styles*/
+	h3[id="mug_icon"] {background-size: 5%;}
+	h3[id="apps_icon"] {background-size: 5%;}
+	h3[id="portfolio_icon"] {background-size: 5%;}
+	h3[id="honors_icon"] {background-size: 5%;}
+	h3[class="about_subhead"] {padding-left: 5%;}
+	p[class="about_text"] 		{	margin-left: 0;
+									margin-right: 5%;
+	}
+	.college_logo		{	height: 40%;
+							width: 43%;
+	}
+	.over_flame			{	margin-bottom: 4%}
 	
 }
