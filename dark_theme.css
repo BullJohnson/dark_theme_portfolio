@@ -219,7 +219,7 @@ h2:hover	{	transform: scale(1.02);}
 
 
 /*About Page Styles*/
-.about_item_indent		{	margin-left: 3em;
+.masked_item			{	margin-left: 3em;
 							margin-top: 0;
 							margin-bottom: 0;
 							height: 120px;
@@ -227,6 +227,15 @@ h2:hover	{	transform: scale(1.02);}
 							text-overflow: ellipsis;
 							-webkit-mask-image: linear-gradient(180deg, #232323 40%, transparent);
 									mask-image: linear-gradient(180deg, #232323 40%, transparent);
+}
+.unmasked_item			{	margin-left: 3em;
+							margin-top: 0;
+							margin-bottom: 0;
+							height: auto;
+							overflow: visible;
+							text-overflow: unset;
+							-webkit-mask-image: none;
+									mask-image: none;
 }
 .over_flame				{	position: relative;
 							z-index: 2;
@@ -273,6 +282,9 @@ h6 	a 					{	text-decoration: none;
 							color: #defeca;							
 }
 h6 	a:hover				{	color: #018f23;}
+		/*Toggle class for click event on "show more/less"*/
+h6 a.open 				{	color: #018f23;}
+h6 a.open:hover 		{	color: #defeca;}
 
 
 				/*For transform of app-tiles, on the home page*/
@@ -412,14 +424,18 @@ h6 	a:hover				{	color: #018f23;}
 	h3[id="honors_icon"] {background-size: 6%;}
 	
 	.college_logo		{	margin-left: 4.5%;}
-	.about_item_indent	{	padding-top: 2px;
+	.masked_item		{	padding-top: 2px;
 							margin-left: 4em;
 	}
+	.unmasked_item		{	padding-top: 2px;
+							margin-left: 4em;
+}
 	.over_flame			{	margin-bottom: 3%;}
 	
 	div[class="about_item_indent"] img {	max-width: 55%;
 											max-height: 55%;
 	}
+	#about_page_button	{margin-top: 1%;}
 
 }
 

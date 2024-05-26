@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="dark_theme.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
     </head>
 
     <body>
@@ -37,7 +38,7 @@
                     <h1 class="content_heading">About:</h1>
 
                     <h3 class="about_subhead" id="mug_icon">About Me:</h3>
-					<div class="about_item_indent">
+					<div class="masked_item">
 						<dl>
 							<dt>William Johnson</dt>
                         		<dd>
@@ -51,7 +52,7 @@
 					<h6><a href="#">Show More</a></h6>
 
                     <h3 class="about_subhead" id="apps_icon">About My Featured Apps:</h3>
-					<div class="about_item_indent">
+					<div class="masked_item">
 						<dl>
 							<dt>Municipal</dt>
                         		<dd>
@@ -80,7 +81,7 @@
 					<h6><a href="#">Show More</a></h6>                    
  
                     <h3 class="about_subhead" id="portfolio_icon">About My Portfolio:</h3>
-					<div class="about_item_indent">
+					<div class="masked_item">
 						<dl>
 							<dt>?Heading?</dt>
                         		<dd>
@@ -94,7 +95,7 @@
 					<h6><a href="#">Show More</a></h6>
 
                     <h3 class="about_subhead" id="honors_icon">About My Honors:</h3>
-					<div class="about_item_indent">
+					<div class="masked_item">
 						<dl>
 							<dt class="over_flame">President's Honor List</dt>
                         		<dd>
@@ -102,7 +103,7 @@
 										<img class="college_logo" src="images/presidents_honor_list_6.png" alt="College Logo">
 										<br>
 										"Dear William,<br>
-										It gives me great pleasure to inform you that you have beennamed to 
+										It gives me great pleasure to inform you that you have been named to 
 										the President's Honor List for part-time students.<br>
 										This honor recognizes the achievement of an academic grade point 
 										average of more than 3.5 while having completed a minimum of 12 
@@ -121,7 +122,7 @@
 					<h6><a href="#">Show More</a></h6>
 
                 </div>
-				<div class="center_button">
+				<div class="center_button" id="about_page_button">
                     <a href="images/resume_green.pdf" target="_blank">
                         <button type="button" class="download_cv">Download CV</button>
                     </a>
@@ -131,6 +132,35 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="dark_theme.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+		<script>
+
+			$(document).ready( ()=> {
+
+				//Runs when "show more" or "show less" is clicked
+				$("#about h6 a").click( evt => {
+					const showAnchor = evt.currentTarget;
+
+					if ($(showAnchor).attr("class") != "open") {
+						$(showAnchor).text("Show Less");
+						//$(showAnchor).parent().prev().attr("class", "unmasked_item");
+						$(showAnchor).parent().prev().css("position", "absolute");
+						$(showAnchor).parent().prev().switchClass( "masked_item", "unmasked_item", 1000, "easeInOutQuad");
+						$(showAnchor).parent().prev().css("position", "unset");
+					} 
+					else {
+						$(showAnchor).text("Show More");
+						//$(showAnchor).parent().prev().attr("class", "masked_item");
+						$(showAnchor).parent().prev().css("position", "absolute");
+						$(showAnchor).parent().prev().switchClass( "unmasked_item", "masked_item", 1000, "easeInOutQuad");
+						$(showAnchor).parent().prev().css("position", "unset");
+					}
+
+					$(showAnchor).toggleClass("open");
+					evt.preventDefault();
+				});	//end click
+			});	//end ready
+
+		</script>
     </body>
 </html>
