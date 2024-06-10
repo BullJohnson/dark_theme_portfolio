@@ -116,6 +116,12 @@
 										Dr. Marta Yera Cronin<br>
 										President"
 									</p>
+								</dd>
+							<dt>Academic Acheivement Award</dt>
+								<dd>
+									<div class="award_frame">
+										<img class="certificate" src="images/certificate2.png" alt="Certificate of Academic Acheivement">
+									</div>
 								</dd>	
 						</dl>  
 					</div>
@@ -147,13 +153,23 @@
 						$(showAnchor).parent().prev().css("position", "absolute");
 						$(showAnchor).parent().prev().switchClass( "masked_item", "unmasked_item", 1000, "easeInOutQuad");
 						$(showAnchor).parent().prev().css("position", "unset");
-					} 
+						//$(showAnchor).parent().prev().css("height", "auto");
+						//$(showAnchor).parent().prev().css("overflow", "visible");
+						//$(showAnchor).parent().prev().css("text-overflow", "unset");
+						//$(showAnchor).parent().prev().css("-webkit-mask-image", "none");
+						//$(showAnchor).parent().prev().css("mask-image", "none");
+					}
 					else {
 						$(showAnchor).text("Show More");
 						//$(showAnchor).parent().prev().attr("class", "masked_item");
 						$(showAnchor).parent().prev().css("position", "absolute");
 						$(showAnchor).parent().prev().switchClass( "unmasked_item", "masked_item", 1000, "easeInOutQuad");
 						$(showAnchor).parent().prev().css("position", "unset");
+						//$(showAnchor).parent().prev().css("height", "120px");
+						//$(showAnchor).parent().prev().css("overflow", "hidden");
+						//$(showAnchor).parent().prev().css("text-overflow", "elippsis");
+						//$(showAnchor).parent().prev().css("-webkit-mask-image", "linear-gradient(180deg, #232323 40%, transparent");
+						//$(showAnchor).parent().prev().css("mask-image", "linear-gradient(180deg, #232323 40%, transparent");
 					}
 
 					$(showAnchor).toggleClass("open");

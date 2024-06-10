@@ -237,9 +237,21 @@ h2:hover	{	transform: scale(1.02);}
 							-webkit-mask-image: none;
 									mask-image: none;
 }
+
 .over_flame				{	position: relative;
 							z-index: 2;
 }
+.award_frame			{	display: flexbox;
+							text-align: center;
+							width: fit-content;
+							margin-left: -5em;
+							margin-top: 2%;
+							margin-bottom: 0;
+}
+.certificate			{	width: 70%;
+							margin-bottom: 0;
+}
+
 h3[id="mug_icon"] {background: url("images/mug_icon.png")left no-repeat;
 	background-size: contain;
 	background-size: 10%;	
