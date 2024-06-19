@@ -324,6 +324,12 @@ h6 a.open:hover 		{	color: #defeca;}
 						top: 5px;
 						left: 20px
 }
+.badge_as_icon				{	width: 6vw;
+								position: relative;
+								float: left;
+}
+.aws_links			{	text-decoration: none;}
+.aws_links:hover	{	color: #018f23;}
 
 
 /*Media Query for viewport width 500-700 pixels, (still single column, but small adjustments)*/
@@ -377,6 +383,10 @@ h6 a.open:hover 		{	color: #defeca;}
 						position: absolute;
 						top: 5px;
 						left: 20px
+	}
+	.badge_as_icon		{	width: 5vw;
+							position: relative;
+							float: left;
 	}
 	
 }
@@ -468,6 +478,10 @@ h6 a.open:hover 		{	color: #defeca;}
 						position: absolute;
 						top: 5px;
 						left: 5px;
+	}
+	.badge_as_icon		{	width: 4.75vw;
+							position: relative;
+							float: left;
 	}
 
 }
@@ -563,9 +577,13 @@ h6 a.open:hover 		{	color: #defeca;}
 	
 	/*Styles for my AWS Badges*/
 	#front_page_badge	{	width: 10vw;
-						position: absolute;
-						top: 5px;
-						left: 5px;
+							position: absolute;
+							top: 5px;
+							left: 5px;
+	}
+	.badge_as_icon		{	width: 4vw;
+							position: relative;
+							float: left;
 	}
 	
 }
