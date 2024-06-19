@@ -318,6 +318,13 @@ h6 a.open:hover 		{	color: #defeca;}
 											z-index: 999;
 			}
 
+	/*Styles for my AWS Badges*/
+#front_page_badge	{	width: 16vw;
+						position: absolute;
+						top: 5px;
+						left: 20px
+}
+
 
 /*Media Query for viewport width 500-700 pixels, (still single column, but small adjustments)*/
 @media (min-width: 500px) {
@@ -364,6 +371,13 @@ h6 a.open:hover 		{	color: #defeca;}
 	p 							{	font-size: 1.1em;}
 	h6 							{	font-size: 1.05em;}
 	p[class="about_text"] 		{	margin-left: -14%;}
+	
+	/*Styles for my AWS Badges*/
+	#front_page_badge	{	width: 14vw;
+						position: absolute;
+						top: 5px;
+						left: 20px
+	}
 	
 }
 
@@ -448,6 +462,13 @@ h6 a.open:hover 		{	color: #defeca;}
 											max-height: 55%;
 	}
 	#about_page_button	{margin-top: 1%;}
+	
+	/*Styles for my AWS Badges*/
+	#front_page_badge	{	width: 12vw;
+						position: absolute;
+						top: 5px;
+						left: 5px;
+	}
 
 }
 
@@ -539,5 +560,12 @@ h6 a.open:hover 		{	color: #defeca;}
 							width: 43%;
 	}
 	.over_flame			{	margin-bottom: 4%}
+	
+	/*Styles for my AWS Badges*/
+	#front_page_badge	{	width: 10vw;
+						position: absolute;
+						top: 5px;
+						left: 5px;
+	}
 	
 }
